@@ -5,6 +5,8 @@
 package main;
 
 import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
+import view.student.AddStudent;
 
 /**
  *
@@ -30,32 +32,49 @@ public class MainGUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        mainTabPane = new javax.swing.JTabbedPane();
         studentPane = new javax.swing.JPanel();
         btnPane1 = new javax.swing.JPanel();
         addStudentBtn = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        detailLbl = new javax.swing.JLabel();
+        searchStudentBtn = new javax.swing.JButton();
+        updateStudentBtn = new javax.swing.JButton();
+        deleteStudentBtn = new javax.swing.JButton();
         studentDesktopPane = new javax.swing.JDesktopPane();
         examPane = new javax.swing.JPanel();
+        btnPane2 = new javax.swing.JPanel();
+        addExamBtn = new javax.swing.JButton();
+        updateExamBtn = new javax.swing.JButton();
+        deleteExamBtn = new javax.swing.JButton();
+        detailLbl1 = new javax.swing.JLabel();
+        examDesktopPane = new javax.swing.JDesktopPane();
         paymentPane = new javax.swing.JPanel();
+        btnPane3 = new javax.swing.JPanel();
+        addPaymentBtn = new javax.swing.JButton();
+        updateExamBtn1 = new javax.swing.JButton();
+        deletePaymentBtn = new javax.swing.JButton();
+        detailLbl2 = new javax.swing.JLabel();
+        examDesktopPane1 = new javax.swing.JDesktopPane();
         employeePane = new javax.swing.JPanel();
-        btnPane = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnPane4 = new javax.swing.JPanel();
+        addEmployeeBtn = new javax.swing.JButton();
+        searchEmployeeBtn = new javax.swing.JButton();
+        updateEmployeeBtn = new javax.swing.JButton();
+        deleteEmployeeBtn = new javax.swing.JButton();
+        workDetailBtn = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         homeBtn = new javax.swing.JButton();
         helpBtn = new javax.swing.JButton();
         logoutBtn = new javax.swing.JButton();
         refreshBtn = new javax.swing.JButton();
-        jPanel8 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Main Menu");
         setPreferredSize(new java.awt.Dimension(670, 433));
 
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        mainTabPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        studentPane.setToolTipText("Student");
 
         addStudentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/addStudent.png"))); // NOI18N
         addStudentBtn.setText("Add");
@@ -66,17 +85,17 @@ public class MainGUI extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/searchStudent.png"))); // NOI18N
-        jButton2.setText("Search");
-        jButton2.setIconTextGap(20);
+        searchStudentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/searchStudent.png"))); // NOI18N
+        searchStudentBtn.setText("Search");
+        searchStudentBtn.setIconTextGap(20);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/updateStudent.png"))); // NOI18N
-        jButton3.setText("Update");
-        jButton3.setIconTextGap(20);
+        updateStudentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/updateStudent.png"))); // NOI18N
+        updateStudentBtn.setText("Update");
+        updateStudentBtn.setIconTextGap(20);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/deleteStudent.png"))); // NOI18N
-        jButton4.setText("Delete");
-        jButton4.setIconTextGap(23);
+        deleteStudentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/deleteStudent.png"))); // NOI18N
+        deleteStudentBtn.setText("Delete");
+        deleteStudentBtn.setIconTextGap(23);
 
         javax.swing.GroupLayout btnPane1Layout = new javax.swing.GroupLayout(btnPane1);
         btnPane1.setLayout(btnPane1Layout);
@@ -85,11 +104,10 @@ public class MainGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnPane1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(btnPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(detailLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(addStudentBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(searchStudentBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(updateStudentBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(deleteStudentBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         btnPane1Layout.setVerticalGroup(
@@ -98,14 +116,12 @@ public class MainGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(addStudentBtn)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(searchStudentBtn)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(updateStudentBtn)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addGap(30, 30, 30)
-                .addComponent(detailLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(deleteStudentBtn)
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         studentDesktopPane.setOpaque(false);
@@ -114,11 +130,11 @@ public class MainGUI extends javax.swing.JFrame {
         studentDesktopPane.setLayout(studentDesktopPaneLayout);
         studentDesktopPaneLayout.setHorizontalGroup(
             studentDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGap(0, 637, Short.MAX_VALUE)
         );
         studentDesktopPaneLayout.setVerticalGroup(
             studentDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 515, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout studentPaneLayout = new javax.swing.GroupLayout(studentPane);
@@ -128,70 +144,245 @@ public class MainGUI extends javax.swing.JFrame {
             .addGroup(studentPaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(studentDesktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(studentDesktopPane)
+                .addGap(14, 14, 14))
         );
         studentPaneLayout.setVerticalGroup(
             studentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(studentPaneLayout.createSequentialGroup()
-                .addGroup(studentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(studentPaneLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(studentPaneLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(studentDesktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(btnPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(154, Short.MAX_VALUE))
+            .addComponent(studentDesktopPane)
         );
 
-        jTabbedPane1.addTab("Student", new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/student.png")), studentPane); // NOI18N
+        mainTabPane.addTab("Student", new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/student.png")), studentPane); // NOI18N
 
-        examPane.setToolTipText("");
+        examPane.setToolTipText("Exam");
+
+        addExamBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/exam_images/add_Exam.png"))); // NOI18N
+        addExamBtn.setText("Add");
+        addExamBtn.setIconTextGap(33);
+        addExamBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addExamBtnActionPerformed(evt);
+            }
+        });
+
+        updateExamBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/exam_images/update_Exam.png"))); // NOI18N
+        updateExamBtn.setText("Update");
+        updateExamBtn.setIconTextGap(20);
+
+        deleteExamBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/exam_images/delete_Exam.png"))); // NOI18N
+        deleteExamBtn.setText("Delete");
+        deleteExamBtn.setIconTextGap(23);
+
+        javax.swing.GroupLayout btnPane2Layout = new javax.swing.GroupLayout(btnPane2);
+        btnPane2.setLayout(btnPane2Layout);
+        btnPane2Layout.setHorizontalGroup(
+            btnPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnPane2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(btnPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(addExamBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(updateExamBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(deleteExamBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(detailLbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        btnPane2Layout.setVerticalGroup(
+            btnPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnPane2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(addExamBtn)
+                .addGap(18, 18, 18)
+                .addComponent(updateExamBtn)
+                .addGap(18, 18, 18)
+                .addComponent(deleteExamBtn)
+                .addGap(81, 81, 81)
+                .addComponent(detailLbl1, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        examDesktopPane.setOpaque(false);
+
+        javax.swing.GroupLayout examDesktopPaneLayout = new javax.swing.GroupLayout(examDesktopPane);
+        examDesktopPane.setLayout(examDesktopPaneLayout);
+        examDesktopPaneLayout.setHorizontalGroup(
+            examDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 637, Short.MAX_VALUE)
+        );
+        examDesktopPaneLayout.setVerticalGroup(
+            examDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout examPaneLayout = new javax.swing.GroupLayout(examPane);
         examPane.setLayout(examPaneLayout);
         examPaneLayout.setHorizontalGroup(
             examPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 690, Short.MAX_VALUE)
+            .addGroup(examPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(examDesktopPane)
+                .addGap(14, 14, 14))
         );
         examPaneLayout.setVerticalGroup(
             examPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 562, Short.MAX_VALUE)
+            .addGroup(examPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(examPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(examPaneLayout.createSequentialGroup()
+                        .addComponent(btnPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 107, Short.MAX_VALUE))
+                    .addComponent(examDesktopPane))
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Exam", new javax.swing.ImageIcon(getClass().getResource("/resources/exam_images/exam.png")), examPane); // NOI18N
+        mainTabPane.addTab("Exam", new javax.swing.ImageIcon(getClass().getResource("/resources/exam_images/exam.png")), examPane); // NOI18N
+
+        paymentPane.setToolTipText("Payment");
+
+        btnPane3.setToolTipText("Payment");
+
+        addPaymentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/payment_images/add_Payment.png"))); // NOI18N
+        addPaymentBtn.setText("Add");
+        addPaymentBtn.setIconTextGap(33);
+        addPaymentBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPaymentBtnActionPerformed(evt);
+            }
+        });
+
+        updateExamBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/payment_images/update_Payment.png"))); // NOI18N
+        updateExamBtn1.setText("Update");
+        updateExamBtn1.setIconTextGap(20);
+
+        deletePaymentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/payment_images/delete_Payment.png"))); // NOI18N
+        deletePaymentBtn.setText("Delete");
+        deletePaymentBtn.setIconTextGap(23);
+
+        javax.swing.GroupLayout btnPane3Layout = new javax.swing.GroupLayout(btnPane3);
+        btnPane3.setLayout(btnPane3Layout);
+        btnPane3Layout.setHorizontalGroup(
+            btnPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnPane3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(btnPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(addPaymentBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(updateExamBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(deletePaymentBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(detailLbl2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        btnPane3Layout.setVerticalGroup(
+            btnPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnPane3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(addPaymentBtn)
+                .addGap(18, 18, 18)
+                .addComponent(updateExamBtn1)
+                .addGap(18, 18, 18)
+                .addComponent(deletePaymentBtn)
+                .addGap(60, 60, 60)
+                .addComponent(detailLbl2, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        examDesktopPane1.setOpaque(false);
+
+        javax.swing.GroupLayout examDesktopPane1Layout = new javax.swing.GroupLayout(examDesktopPane1);
+        examDesktopPane1.setLayout(examDesktopPane1Layout);
+        examDesktopPane1Layout.setHorizontalGroup(
+            examDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 637, Short.MAX_VALUE)
+        );
+        examDesktopPane1Layout.setVerticalGroup(
+            examDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout paymentPaneLayout = new javax.swing.GroupLayout(paymentPane);
         paymentPane.setLayout(paymentPaneLayout);
         paymentPaneLayout.setHorizontalGroup(
             paymentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 690, Short.MAX_VALUE)
+            .addGroup(paymentPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(examDesktopPane1)
+                .addGap(14, 14, 14))
         );
         paymentPaneLayout.setVerticalGroup(
             paymentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 562, Short.MAX_VALUE)
+            .addGroup(paymentPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(paymentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(examDesktopPane1)
+                    .addGroup(paymentPaneLayout.createSequentialGroup()
+                        .addComponent(btnPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 128, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Payment", new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/employee.png")), paymentPane); // NOI18N
+        mainTabPane.addTab("Payment", new javax.swing.ImageIcon(getClass().getResource("/resources/payment_images/payment.png")), paymentPane); // NOI18N
 
-        jButton1.setText("jButton1");
+        employeePane.setToolTipText("Employee");
 
-        javax.swing.GroupLayout btnPaneLayout = new javax.swing.GroupLayout(btnPane);
-        btnPane.setLayout(btnPaneLayout);
-        btnPaneLayout.setHorizontalGroup(
-            btnPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnPaneLayout.createSequentialGroup()
+        addEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/addEmpoloyee.png"))); // NOI18N
+        addEmployeeBtn.setText("Add");
+        addEmployeeBtn.setIconTextGap(33);
+        addEmployeeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addEmployeeBtnActionPerformed(evt);
+            }
+        });
+
+        searchEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/searchEmpoloyee.png"))); // NOI18N
+        searchEmployeeBtn.setText("Search");
+        searchEmployeeBtn.setIconTextGap(20);
+
+        updateEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/updateEmpoloyee.png"))); // NOI18N
+        updateEmployeeBtn.setText("Update");
+        updateEmployeeBtn.setIconTextGap(20);
+
+        deleteEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/deleteEmpoloyee.png"))); // NOI18N
+        deleteEmployeeBtn.setText("Delete");
+        deleteEmployeeBtn.setIconTextGap(23);
+
+        workDetailBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/employeeWorkDet.png"))); // NOI18N
+        workDetailBtn.setText("Working Details");
+
+        javax.swing.GroupLayout btnPane4Layout = new javax.swing.GroupLayout(btnPane4);
+        btnPane4.setLayout(btnPane4Layout);
+        btnPane4Layout.setHorizontalGroup(
+            btnPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnPane4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addGroup(btnPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(addEmployeeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(searchEmployeeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(updateEmployeeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(deleteEmployeeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(workDetailBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
-        btnPaneLayout.setVerticalGroup(
-            btnPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnPaneLayout.createSequentialGroup()
+        btnPane4Layout.setVerticalGroup(
+            btnPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnPane4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
-                .addContainerGap(506, Short.MAX_VALUE))
+                .addComponent(addEmployeeBtn)
+                .addGap(18, 18, 18)
+                .addComponent(searchEmployeeBtn)
+                .addGap(18, 18, 18)
+                .addComponent(updateEmployeeBtn)
+                .addGap(18, 18, 18)
+                .addComponent(deleteEmployeeBtn)
+                .addGap(18, 18, 18)
+                .addComponent(workDetailBtn)
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout employeePaneLayout = new javax.swing.GroupLayout(employeePane);
@@ -200,18 +391,18 @@ public class MainGUI extends javax.swing.JFrame {
             employeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(employeePaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(479, Short.MAX_VALUE))
+                .addComponent(btnPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(633, Short.MAX_VALUE))
         );
         employeePaneLayout.setVerticalGroup(
             employeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(employeePaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnPane4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Employee", new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/employee.png")), employeePane); // NOI18N
+        mainTabPane.addTab("Employee", new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/employee.png")), employeePane); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -219,15 +410,15 @@ public class MainGUI extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(mainTabPane)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(mainTabPane, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         homeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/other_images/home.png"))); // NOI18N
@@ -269,16 +460,7 @@ public class MainGUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 228, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/other_images/strip.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -286,23 +468,25 @@ public class MainGUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51))
         );
@@ -324,8 +508,25 @@ public class MainGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentBtnActionPerformed
-        detailLbl.setText("You can use this\n feature to add\n a new student\n to the system.");
+        JInternalFrame frames[] = studentDesktopPane.getAllFrames();
+        
+        AddStudent addStudent = new AddStudent();
+        studentDesktopPane.add(addStudent);
+        //addStudent.setLocation(350, 150);
+        addStudent.setVisible(true);        
     }//GEN-LAST:event_addStudentBtnActionPerformed
+
+    private void addExamBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addExamBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addExamBtnActionPerformed
+
+    private void addPaymentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPaymentBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addPaymentBtnActionPerformed
+
+    private void addEmployeeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEmployeeBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addEmployeeBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -342,7 +543,7 @@ public class MainGUI extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -372,27 +573,42 @@ public class MainGUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addEmployeeBtn;
+    private javax.swing.JButton addExamBtn;
+    private javax.swing.JButton addPaymentBtn;
     private javax.swing.JButton addStudentBtn;
-    private javax.swing.JPanel btnPane;
     private javax.swing.JPanel btnPane1;
-    private javax.swing.JLabel detailLbl;
+    private javax.swing.JPanel btnPane2;
+    private javax.swing.JPanel btnPane3;
+    private javax.swing.JPanel btnPane4;
+    private javax.swing.JButton deleteEmployeeBtn;
+    private javax.swing.JButton deleteExamBtn;
+    private javax.swing.JButton deletePaymentBtn;
+    private javax.swing.JButton deleteStudentBtn;
+    private javax.swing.JLabel detailLbl1;
+    private javax.swing.JLabel detailLbl2;
     private javax.swing.JPanel employeePane;
+    private javax.swing.JDesktopPane examDesktopPane;
+    private javax.swing.JDesktopPane examDesktopPane1;
     private javax.swing.JPanel examPane;
     private javax.swing.JButton helpBtn;
     private javax.swing.JButton homeBtn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton logoutBtn;
+    private javax.swing.JTabbedPane mainTabPane;
     private javax.swing.JPanel paymentPane;
     private javax.swing.JButton refreshBtn;
+    private javax.swing.JButton searchEmployeeBtn;
+    private javax.swing.JButton searchStudentBtn;
     private javax.swing.JDesktopPane studentDesktopPane;
     private javax.swing.JPanel studentPane;
+    private javax.swing.JButton updateEmployeeBtn;
+    private javax.swing.JButton updateExamBtn;
+    private javax.swing.JButton updateExamBtn1;
+    private javax.swing.JButton updateStudentBtn;
+    private javax.swing.JButton workDetailBtn;
     // End of variables declaration//GEN-END:variables
 }

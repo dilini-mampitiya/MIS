@@ -1,7 +1,9 @@
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package view.student;
 
 import java.sql.SQLException;
@@ -13,14 +15,12 @@ import utilities.ComboBoxUtility;
  *
  * @author Mampitiya
  */
-public class SearchStudentForm extends javax.swing.JFrame {
-
+public class SearchStudent extends javax.swing.JInternalFrame {
     private DefaultTableModel tableModel;
-
     /**
-     * Creates new form SearchStudentForm
+     * Creates new form SearchStudent
      */
-    public SearchStudentForm() {
+    public SearchStudent() {
         String[] column = {"Name", "Address", "Telephone", "Guardian", "Guardian Cont.", "Class"};
         tableModel = new DefaultTableModel(column, 0);
         initComponents();
@@ -30,8 +30,6 @@ public class SearchStudentForm extends javax.swing.JFrame {
         } catch (SQLException | ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(this, "Database Error!");
         }
-//        final JTextField textField1 = (JTextField) idCmbx.getEditor().getEditorComponent();
-//        new ComboBoxUtility().setSearchableCombo(idCmbx, textField1, "No Order Found...");
     }
 
     /**
@@ -43,7 +41,6 @@ public class SearchStudentForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         idRbtn = new javax.swing.JRadioButton();
@@ -73,13 +70,8 @@ public class SearchStudentForm extends javax.swing.JFrame {
         guardPhnTxt = new javax.swing.JTextField();
         relationTxt = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Search Student Form");
-        setResizable(false);
-
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Search By"));
 
-        buttonGroup1.add(idRbtn);
         idRbtn.setSelected(true);
         idRbtn.setText("Student ID:");
         idRbtn.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -91,7 +83,6 @@ public class SearchStudentForm extends javax.swing.JFrame {
         idCmbx.setEditable(true);
         idCmbx.setEnabled(false);
 
-        buttonGroup1.add(nameRbtn);
         nameRbtn.setText("Student Name:");
         nameRbtn.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -233,7 +224,7 @@ public class SearchStudentForm extends javax.swing.JFrame {
         );
 
         clrBtn.setBackground(new java.awt.Color(153, 180, 209));
-        clrBtn.setText("Clear");
+        clrBtn.setText("Reset");
         clrBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clrBtnActionPerformed(evt);
@@ -294,11 +285,11 @@ public class SearchStudentForm extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(clrBtn)
-                .addGap(79, 79, 79))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -311,9 +302,9 @@ public class SearchStudentForm extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(clrBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -338,7 +329,7 @@ public class SearchStudentForm extends javax.swing.JFrame {
     }//GEN-LAST:event_idRbtnStateChanged
 
     private void nameRbtnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_nameRbtnStateChanged
-        if(nameRbtn.isSelected()){  
+        if(nameRbtn.isSelected()){
             nameCmbx.setEnabled(true);
             idCmbx.setEnabled(false);
         }
@@ -351,45 +342,9 @@ public class SearchStudentForm extends javax.swing.JFrame {
         tableModel.setRowCount(0);
     }//GEN-LAST:event_clrBtnActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /*
-         * Set the Nimbus look and feel
-         */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the
-         * default look and feel. For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SearchStudentForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /*
-         * Create and display the form
-         */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-
-            @Override
-            public void run() {
-                new SearchStudentForm().setVisible(true);
-            }
-        });
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField addTxt;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton clrBtn;
     private javax.swing.JTextField genderTxt;
     private javax.swing.JTextField guardPhnTxt;
