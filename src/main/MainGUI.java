@@ -38,6 +38,7 @@ public class MainGUI extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         detailLbl = new javax.swing.JLabel();
+        studentDesktopPane = new javax.swing.JDesktopPane();
         examPane = new javax.swing.JPanel();
         paymentPane = new javax.swing.JPanel();
         employeePane = new javax.swing.JPanel();
@@ -107,6 +108,19 @@ public class MainGUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        studentDesktopPane.setOpaque(false);
+
+        javax.swing.GroupLayout studentDesktopPaneLayout = new javax.swing.GroupLayout(studentDesktopPane);
+        studentDesktopPane.setLayout(studentDesktopPaneLayout);
+        studentDesktopPaneLayout.setHorizontalGroup(
+            studentDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+        );
+        studentDesktopPaneLayout.setVerticalGroup(
+            studentDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 515, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout studentPaneLayout = new javax.swing.GroupLayout(studentPane);
         studentPane.setLayout(studentPaneLayout);
         studentPaneLayout.setHorizontalGroup(
@@ -114,14 +128,21 @@ public class MainGUI extends javax.swing.JFrame {
             .addGroup(studentPaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(549, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(studentDesktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         studentPaneLayout.setVerticalGroup(
             studentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(studentPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addGroup(studentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(studentPaneLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(studentPaneLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(studentDesktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Student", new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/student.png")), studentPane); // NOI18N
@@ -132,7 +153,7 @@ public class MainGUI extends javax.swing.JFrame {
         examPane.setLayout(examPaneLayout);
         examPaneLayout.setHorizontalGroup(
             examPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 714, Short.MAX_VALUE)
+            .addGap(0, 690, Short.MAX_VALUE)
         );
         examPaneLayout.setVerticalGroup(
             examPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,7 +166,7 @@ public class MainGUI extends javax.swing.JFrame {
         paymentPane.setLayout(paymentPaneLayout);
         paymentPaneLayout.setHorizontalGroup(
             paymentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 714, Short.MAX_VALUE)
+            .addGap(0, 690, Short.MAX_VALUE)
         );
         paymentPaneLayout.setVerticalGroup(
             paymentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,7 +201,7 @@ public class MainGUI extends javax.swing.JFrame {
             .addGroup(employeePaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(503, Short.MAX_VALUE))
+                .addContainerGap(479, Short.MAX_VALUE))
         );
         employeePaneLayout.setVerticalGroup(
             employeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -371,6 +392,7 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JButton logoutBtn;
     private javax.swing.JPanel paymentPane;
     private javax.swing.JButton refreshBtn;
+    private javax.swing.JDesktopPane studentDesktopPane;
     private javax.swing.JPanel studentPane;
     // End of variables declaration//GEN-END:variables
 }
