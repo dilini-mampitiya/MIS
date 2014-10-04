@@ -6,7 +6,11 @@ package main;
 
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
+import javax.swing.JOptionPane;
 import view.student.AddStudent;
+import view.student.DeleteStudent;
+import view.student.EditStudent;
+import view.student.SearchStudent;
 
 /**
  *
@@ -88,14 +92,29 @@ public class MainGUI extends javax.swing.JFrame {
         searchStudentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/searchStudent.png"))); // NOI18N
         searchStudentBtn.setText("Search");
         searchStudentBtn.setIconTextGap(20);
+        searchStudentBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchStudentBtnActionPerformed(evt);
+            }
+        });
 
         updateStudentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/updateStudent.png"))); // NOI18N
         updateStudentBtn.setText("Update");
         updateStudentBtn.setIconTextGap(20);
+        updateStudentBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateStudentBtnActionPerformed(evt);
+            }
+        });
 
         deleteStudentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/student_images/deleteStudent.png"))); // NOI18N
         deleteStudentBtn.setText("Delete");
         deleteStudentBtn.setIconTextGap(23);
+        deleteStudentBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteStudentBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnPane1Layout = new javax.swing.GroupLayout(btnPane1);
         btnPane1.setLayout(btnPane1Layout);
@@ -164,11 +183,6 @@ public class MainGUI extends javax.swing.JFrame {
         addExamBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/exam_images/add_Exam.png"))); // NOI18N
         addExamBtn.setText("Add");
         addExamBtn.setIconTextGap(33);
-        addExamBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addExamBtnActionPerformed(evt);
-            }
-        });
 
         updateExamBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/exam_images/update_Exam.png"))); // NOI18N
         updateExamBtn.setText("Update");
@@ -250,11 +264,6 @@ public class MainGUI extends javax.swing.JFrame {
         addPaymentBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/payment_images/add_Payment.png"))); // NOI18N
         addPaymentBtn.setText("Add");
         addPaymentBtn.setIconTextGap(33);
-        addPaymentBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addPaymentBtnActionPerformed(evt);
-            }
-        });
 
         updateExamBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/payment_images/update_Payment.png"))); // NOI18N
         updateExamBtn1.setText("Update");
@@ -334,11 +343,6 @@ public class MainGUI extends javax.swing.JFrame {
         addEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/addEmpoloyee.png"))); // NOI18N
         addEmployeeBtn.setText("Add");
         addEmployeeBtn.setIconTextGap(33);
-        addEmployeeBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addEmployeeBtnActionPerformed(evt);
-            }
-        });
 
         searchEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee_images/searchEmpoloyee.png"))); // NOI18N
         searchEmployeeBtn.setText("Search");
@@ -508,25 +512,47 @@ public class MainGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentBtnActionPerformed
-        JInternalFrame frames[] = studentDesktopPane.getAllFrames();
-        
         AddStudent addStudent = new AddStudent();
-        studentDesktopPane.add(addStudent);
-        //addStudent.setLocation(350, 150);
-        addStudent.setVisible(true);        
+        addComponentTo(addStudent);
     }//GEN-LAST:event_addStudentBtnActionPerformed
 
-    private void addExamBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addExamBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addExamBtnActionPerformed
+    private void searchStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchStudentBtnActionPerformed
+        SearchStudent searchStudent = new SearchStudent();
+        addComponentTo(searchStudent);
+    }//GEN-LAST:event_searchStudentBtnActionPerformed
 
-    private void addPaymentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPaymentBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addPaymentBtnActionPerformed
+    private void deleteStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteStudentBtnActionPerformed
+        DeleteStudent deleteStudent = new DeleteStudent();
+        addComponentTo(deleteStudent);
+    }//GEN-LAST:event_deleteStudentBtnActionPerformed
 
-    private void addEmployeeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEmployeeBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addEmployeeBtnActionPerformed
+    private void updateStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateStudentBtnActionPerformed
+        EditStudent editStudent = new EditStudent();
+        addComponentTo(editStudent);
+    }//GEN-LAST:event_updateStudentBtnActionPerformed
+
+    public void addComponentTo(JInternalFrame frame) {
+        JInternalFrame frames[] = studentDesktopPane.getAllFrames();
+        boolean available = false;
+        for (int i = 0; i < frames.length; i++) {
+            if (frames[i].getClass().getSimpleName().equals(frame.getClass().getSimpleName())) {
+                available = true;
+                break;
+            }
+        }
+        if (frames.length == 0 && !available) {
+            ((javax.swing.plaf.basic.BasicInternalFrameUI) frame.getUI()).setNorthPane(null);
+            studentDesktopPane.add(frame);
+            frame.setVisible(true);
+        } else if (available && frames.length >= 1 && !frames[0].getClass().equals(frame.getClass())) {
+            if (frames.length >= 1) {
+                int res = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit from the " + frame.getClass().getSimpleName() + " Form ?");
+                if (res == 0) {
+                    frame.setVisible(false); 
+                }
+            }
+        }
+    }
 
     /**
      * @param args the command line arguments
@@ -566,9 +592,8 @@ public class MainGUI extends javax.swing.JFrame {
 
             public void run() {
                 MainGUI mainGUI = new MainGUI();
-                mainGUI.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-                System.out.println(mainGUI.getWidth()+ " "+mainGUI.getHeight());
-                mainGUI.setVisible(true);               
+                mainGUI.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                mainGUI.setVisible(true);
             }
         });
     }

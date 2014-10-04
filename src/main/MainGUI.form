@@ -202,6 +202,9 @@
                             <Property name="text" type="java.lang.String" value="Search"/>
                             <Property name="iconTextGap" type="int" value="20"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchStudentBtnActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="updateStudentBtn">
                           <Properties>
@@ -211,6 +214,9 @@
                             <Property name="text" type="java.lang.String" value="Update"/>
                             <Property name="iconTextGap" type="int" value="20"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateStudentBtnActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="deleteStudentBtn">
                           <Properties>
@@ -220,6 +226,9 @@
                             <Property name="text" type="java.lang.String" value="Delete"/>
                             <Property name="iconTextGap" type="int" value="23"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteStudentBtnActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -329,9 +338,6 @@
                             <Property name="text" type="java.lang.String" value="Add"/>
                             <Property name="iconTextGap" type="int" value="33"/>
                           </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addExamBtnActionPerformed"/>
-                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="updateExamBtn">
                           <Properties>
@@ -464,9 +470,6 @@
                             <Property name="text" type="java.lang.String" value="Add"/>
                             <Property name="iconTextGap" type="int" value="33"/>
                           </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPaymentBtnActionPerformed"/>
-                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="updateExamBtn1">
                           <Properties>
@@ -591,9 +594,6 @@
                             <Property name="text" type="java.lang.String" value="Add"/>
                             <Property name="iconTextGap" type="int" value="33"/>
                           </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addEmployeeBtnActionPerformed"/>
-                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="searchEmployeeBtn">
                           <Properties>

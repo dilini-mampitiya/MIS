@@ -48,7 +48,9 @@ public class AddStudent extends javax.swing.JInternalFrame {
         cancelBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         browseBtn = new javax.swing.JButton();
-        picPanel = new javax.swing.JPanel();
+        imageLbl = new javax.swing.JLabel();
+
+        setBorder(null);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Add Student Details"));
         jPanel1.setToolTipText("");
@@ -111,17 +113,6 @@ public class AddStudent extends javax.swing.JInternalFrame {
 
         browseBtn.setText("Browse");
 
-        javax.swing.GroupLayout picPanelLayout = new javax.swing.GroupLayout(picPanel);
-        picPanel.setLayout(picPanelLayout);
-        picPanelLayout.setHorizontalGroup(
-            picPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        picPanelLayout.setVerticalGroup(
-            picPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 151, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -129,17 +120,17 @@ public class AddStudent extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(picPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 68, Short.MAX_VALUE)
-                        .addComponent(browseBtn)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 84, Short.MAX_VALUE)
+                        .addComponent(browseBtn))
+                    .addComponent(imageLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(picPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imageLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(browseBtn)
                 .addContainerGap())
@@ -223,7 +214,7 @@ public class AddStudent extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblContactGu)
                     .addComponent(txtContactGu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveBtn)
                     .addComponent(cancelBtn))
@@ -261,6 +252,7 @@ public class AddStudent extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton browseBtn;
     private javax.swing.JButton cancelBtn;
+    private javax.swing.JLabel imageLbl;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
@@ -271,7 +263,6 @@ public class AddStudent extends javax.swing.JInternalFrame {
     private javax.swing.JLabel lblLastName;
     private javax.swing.JLabel lblMobile;
     private javax.swing.JLabel lblNameGu;
-    private javax.swing.JPanel picPanel;
     private javax.swing.JButton saveBtn;
     private javax.swing.JTextArea txtAddress;
     private javax.swing.JTextField txtContactGu;
